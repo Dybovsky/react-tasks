@@ -9,7 +9,21 @@ import React, { Component } from 'react'
  * button is clocked
  * the new value should be rendered in the h1 mentioned above 
  */
-export default class CompWithState extends Component {
+ export default class CompWithState extends Component {
+  constructor(props){
+    super(props);
+    this.state = {count: 0}
+  }
+  addOne(){
+    //let res = ++this.state.count
+    this.setState({count: ++this.state.count})
+  }
+render(){
+  return(
+    <div>
+    <h1>Count: {this.state.count}</h1>
+    <button onClick={() => {this.addOne()}}>+1</button>
+    </div>
+  )}
   // Your code
-  
 }

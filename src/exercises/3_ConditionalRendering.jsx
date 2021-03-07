@@ -10,6 +10,20 @@ import React from 'react'
  * with the text "No number provided"
  */
 export default function ConditionalRendering(props) {
+  if(props.number < 10){
+    return(
+      <p>Your number is less than 10</p>
+    )
+  } else if(props.number > 10){
+    return(
+      <h1>Your number is bigger than 10</h1>
+    )
+  }else{
+    return(
+      <span>No number provided</span>
+    )
+  }
+  
   // Your code
   
 }

@@ -7,6 +7,12 @@ import React from 'react'
  * if name is empty (empty string, undefined or null), render "Hi "
  */
 export default function WithProps(props) {
+ 
+    return(
+      <h1>Hi {props.name}</h1>
+    )
+
+
   // Your code
   
 }

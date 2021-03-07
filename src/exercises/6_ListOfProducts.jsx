@@ -9,5 +9,16 @@ import React from 'react'
  * Do not forget to add key to each property (use the id as the key, as it is unique)
  */
 export default function ListOfProducts(props) {
-  // Your code
+    const {products} = props;
+
+    const newLis = products.map((product) => {
+      if(product.price === undefined){
+        return(<li key={product.id}>{product.name} N/A</li>)
+      } else {
+        return(<li key={product.id}>{product.name} {product.price}</li>)
+      }
+    })
+
+    return(<ul>{newLis}</ul>)
+
 }

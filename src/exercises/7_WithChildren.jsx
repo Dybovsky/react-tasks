@@ -5,5 +5,8 @@ import React from 'react'
  * and render them inside a div
  */
 export default function WithChildren(props) {
+  return(
+    <div>{props.children}</div>
+  )
   // Your code
 }
